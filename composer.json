@@ -23,7 +23,9 @@
     "scripts": {
         "start": "@start:linux",
         "start:linux": "bin/run-server.sh",
-        "start:windows": "bin/run-server.bat"
+        "start:windows": "bin/run-server.bat",
+        "test:cs": "php vendor/bin/php-cs-fixer fix --dry-run --diff",
+        "fix:cs": "php vendor/bin/php-cs-fixer fix"
     },
     "config": {
         "process-timeout": 0
