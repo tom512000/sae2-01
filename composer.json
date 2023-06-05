@@ -21,6 +21,8 @@
         "friendsofphp/php-cs-fixer": "^3.17"
     },
     "scripts": {
+        "start": "@start:linux",
+        "start:linux": "bin/run-server.sh",
         "start:windows": "bin/run-server.bat"
     },
     "config": {
