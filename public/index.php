@@ -11,7 +11,7 @@ $tab = FilmCollection::findAll();
 
 for ($i = 0; $i < count($tab); $i++) {
     $verif = $appwebpage->escapeString($tab[$i]->getTitle());
-    $appwebpage->appendContent("\t<a href='/film.php?movieId={$tab[$i]->getId()}'>
+    $appwebpage->appendContent("\t<a href='/film.php?filmId={$tab[$i]->getId()}'>
                                             <div class='affiche'>
                                                    <img src='./image.php?posterId={$tab[$i]->getPosterId()}' alt='Image'/>
                                                    <p>$verif</p>
