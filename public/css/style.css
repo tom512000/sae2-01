@@ -54,15 +54,22 @@ div.list a {
     color: black;
 }
 
+/*index.html*/
 div.affiche {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
     width: 100%;
     height: 100%;
+    border-radius: 0 0 20px 20px;
 }
 
 img {
+    user-select: none;
+    pointer-events: none;
+}
+
+img.menu {
     width: 100%;
     height: 85%;
 }
@@ -75,6 +82,90 @@ div.affiche p {
     align-items: center;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
+/*film.php*/
+div.bloc {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 400px;
+    margin: 5px 5px 5px 5px;
+    background-color: #ffffff;
+    border-radius: 0 20px 20px 0;
+}
+
+div.bloc img {
+    height: 100%;
+    width: 30%;
+}
+
+div.infos {
+    height: 100%;
+    width: 70%;
+}
+
+div.ligne {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% / 4 - 15px);
+    width: 100%;
+}
+
+.titre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    font-family: 'Righteous', cursive;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    font-family: 'Aoboshi One', serif;
+    margin-top: 10px;
+    font-size: 20px;
+    border-left: 2px solid black;
+}
+
+.original {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: calc(100% / 4 - 15px);
+    width: 100%;
+    border-top: 2px solid black;
+    font-family: 'Aoboshi One', serif;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% / 4 - 15px);
+    width: 100%;
+    border-top: 2px solid black;
+    font-family: 'Aoboshi One', serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.resume {
+    height: calc(100% / 4 - 15px);
+    width: 100%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border-top: 2px solid black;
+}
+
+
 
 div.footer {
     display: flex;
