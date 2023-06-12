@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Entity;
 
+use Database\MyPdo;
+use Entity\Exception\EntityNotFoundException;
+use PDO;
+
 class Film
 {
     private int $id;
@@ -160,5 +164,27 @@ class Film
         $this->title = $title;
     }
 
-
+    /**
+     * Méthode permettant de retouner un film grâce à son id.
+     * @param int $id
+     * @return Film
+     */
+    public static function findById(int $id): Film
+    {
+        $stmt = MyPDO::getInstance()->prepare(
+            <<<'SQL'
+                SELECT id, posterId, originalLanguage, originalTitle, overview, releaseDate, runtime, tagline, title
+                FROM movie
+                WHERE id = :id
+        SQL
+        );
+        $stmt->setFetchMode(PDO::FETCH_CLASS, Film::class);
+        $stmt->execute([":id" => $id]);
+        $test = $stmt->fetch();
+        if (!$test) {
+            return throw new EntityNotFoundException();
+        } else {
+            return $test;
+        }
+    }
 }
