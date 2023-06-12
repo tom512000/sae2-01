@@ -2,12 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap'); /*Police d'écriture .bouton*/
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap'); /*Police d'écriture .texte*/
 
-/*
-    font-family: 'Righteous', cursive; Titre
-    font-family: 'Plus Jakarta Sans', sans-serif; Texte
-    font-family: 'Aoboshi One', serif; Footer
-*/
-
 html {
     width: 100%;
     height: 100%;
@@ -18,6 +12,7 @@ body {
     height: calc(100% - 5px);
     margin: 0;
     padding: 0;
+    background-color: #3b3b3b;
 }
 
 div.header {
@@ -46,11 +41,39 @@ div.content {
 div.list {
     display: flex;
     flex-wrap: wrap;
+    overflow-y: auto;
+    justify-content: space-between;
+    margin-left: 50px;
 }
 
 div.list a {
+    width: calc(33.33% - 100px);
+    height: 400px;
+    margin: 5px 5px 5px 5px;
     text-decoration: none;
     color: black;
+}
+
+div.affiche {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: 95%;
+}
+
+div.affiche p {
+    display: flex;
+    width: 100%;
+    height: 5%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 div.footer {
