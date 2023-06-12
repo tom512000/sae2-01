@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap'); /*Police d'écriture .footer*/
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap'); /*Police d'écriture .bouton*/
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap'); /*Police d'écriture .texte*/
+
+/*
+    font-family: 'Righteous', cursive; Titre
+    font-family: 'Plus Jakarta Sans', sans-serif; Texte
+    font-family: 'Aoboshi One', serif; Footer
+*/
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: calc(100% - 5px);
+    margin: 0;
+    padding: 0;
+}
+
+div.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: calc(10% - 10px);
+    margin: 5px 100px 5px 100px;
+    background-color: #bababa;
+    border-radius: 20px 20px 0 0;
+}
+div.header h1 {
+    font-family: 'Righteous', cursive;
+    letter-spacing: 1px;
+}
+
+div.content {
+    display: flex;
+    width: auto;
+    height: 80%;
+    margin: 5px 100px 5px 100px;
+    background-color: #bababa;
+}
+
+div.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.list a {
+    text-decoration: none;
+    color: black;
+}
+
+div.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: calc(10% - 10px);
+    margin: 5px 100px 5px 100px;
+    background-color: #bababa;
+    border-radius: 0 0 20px 20px;
+    font-family: 'Aoboshi One', serif;
+    font-style: italic;
+}
