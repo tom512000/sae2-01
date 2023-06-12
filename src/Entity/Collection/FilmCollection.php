@@ -19,7 +19,7 @@ class FilmCollection
     {
         $stmt = MyPDO::getInstance()->prepare(
             <<<'SQL'
-            SELECT id, originalLanguage, originalTitle, overview, releaseDate, runtime, tagline, title
+            SELECT id, posterId, originalLanguage, originalTitle, overview, releaseDate, runtime, tagline, title
             FROM movie
             ORDER BY title
         SQL

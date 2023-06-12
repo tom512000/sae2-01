@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Entity;
 
+use Database\MyPdo;
+use Entity\Exception\EntityNotFoundException;
+use PDO;
+
 class Image
 {
     private int $id;
@@ -39,5 +43,28 @@ class Image
     public function setJpeg(string $jpeg):void
     {
         $this->jpeg = $jpeg;
+    }
+
+    /**
+     * Méthode permettant de retourner le poster d'un Film grâce à son id.
+     *
+     * @param int $id
+     * @return Image
+     */
+    public static function findById(int $id): Image
+    {
+        $stmt = MyPDO::getInstance()->prepare(
+            <<<'SQL'
+            SELECT id, jpeg
+            FROM image
+            WHERE id = :id
+        SQL
+        );
+        $stmt->execute([":id" => $id]);
+        $stmt->setFetchMode(PDO::FETCH_CLASS, Image::class);
+        if (($res = $stmt->fetch()) === false) {
+            throw new EntityNotFoundException("Pas de cover", 0);
+        }
+        return $res;
     }
 }
