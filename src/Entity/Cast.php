@@ -119,4 +119,28 @@ class Cast
             return $test;
         }
     }
+
+    /**
+     * Méthode permettant de retouner une liste de Cast grâce à un id d'Acteur.
+     * @param int $idActor
+     * @return Cast[]
+     */
+    public static function findByActorId(int $idActor): array
+    {
+        $stmt = MyPDO::getInstance()->prepare(
+            <<<'SQL'
+                SELECT id, movieId, peopleId, role, orderIndex
+                FROM cast
+                WHERE peopleId = :idActor
+        SQL
+        );
+        $stmt->setFetchMode(PDO::FETCH_CLASS, Cast::class);
+        $stmt->execute([":idActor" => $idActor]);
+        $test = $stmt->fetchAll();
+        if (!$test) {
+            return throw new EntityNotFoundException();
+        } else {
+            return $test;
+        }
+    }
 }

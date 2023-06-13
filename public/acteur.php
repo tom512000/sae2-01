@@ -21,6 +21,8 @@ if (!$acteur) {
 }
 
 $appwebpage->setTitle("Films - {$acteur->getName()}");
+
+$death = $acteur->getDeathday();
 $appwebpage->appendContent("\t<div class='bloc'>
                                         <img src='./image.php?posterId={$acteur->getAvatarId()}' alt='Image'/>
                                         <div class='infos3'>
@@ -34,5 +36,20 @@ $appwebpage->appendContent("\t<div class='bloc'>
                                             <p class='biographie'>{$acteur->getBiography()}</p>
                                         </div>
                                      </div>\n");
+
+$casts = Cast::findByActorId($acteur->getId());
+foreach ($casts as $cast) {
+    $film = Film::findById($cast->getMovieId());
+    $appwebpage->appendContent("\t<a class='lien2' href='/film.php?filmId={$film->getId()}'>
+                                        <div class='bloc3'>
+                                            <img src='./image.php?posterId={$film->getPosterId()}' alt='Image'/>
+                                            <div class='infos4'>
+                                                <p class='titre2'>{$film->getTitle()}</p>
+                                                <p class='date2'>{$film->getReleaseDate()}</p>
+                                            </div>
+                                            <p class='role2'>{$cast->getRole()}</p>
+                                        </div>
+                                        </a>\n");
+}
 
 echo $appwebpage->toHTML();

@@ -53,7 +53,7 @@ class Acteur
     /**
      * @return string
      */
-    public function getBirthday(): string
+    public function getBirthday(): ?string
     {
         return $this->birthday;
     }
@@ -61,7 +61,7 @@ class Acteur
     /**
      * @param string $birthday
      */
-    public function setBirthday(string $birthday):void
+    public function setBirthday(string $birthday): void
     {
         $this->birthday = $birthday;
     }
@@ -69,7 +69,7 @@ class Acteur
     /**
      * @return string
      */
-    public function getDeathday(): string
+    public function getDeathday(): ?string
     {
         return $this->deathday;
     }
@@ -77,7 +77,7 @@ class Acteur
     /**
      * @param string $deathday
      */
-    public function setDeathday(string $deathday):void
+    public function setDeathday(string $deathday): void
     {
         $this->deathday = $deathday;
     }
