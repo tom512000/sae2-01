@@ -165,7 +165,45 @@ div.ligne {
     border-top: 2px solid black;
 }
 
+.bloc2 {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 200px;
+    margin: 5px 5px 5px 5px;
+    background-color: #ffffff;
+    border-radius: 0 20px 20px 0;
+    font-family: 'Aoboshi One', serif;
+}
 
+.infos2 {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.role {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    font-size: 25px;
+    margin-top: -10px;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    font-size: 25px;
+    margin-top: -10px;
+}
 
 div.footer {
     display: flex;

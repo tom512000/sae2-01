@@ -12,8 +12,8 @@ class Acteur
 {
     private int $id;
     private int $avatarId;
-    private string $birthday;
-    private string $deathday;
+    private ?string $birthday;
+    private ?string $deathday;
     private string $name;
     private string $biography;
     private string $placeOfBirth;
@@ -139,7 +139,7 @@ class Acteur
     {
         $stmt = MyPDO::getInstance()->prepare(
             <<<'SQL'
-                SELECT id, NVL(avatarId, 'img/actor.png'), birthday, NVL(deathday, ''), name, biography, placeOfBirth
+                SELECT id, COALESCE(avatarId, 0) AS avatarId, birthday, deathday, name, biography, placeOfBirth
                 FROM people
                 WHERE id = :id
         SQL

@@ -46,7 +46,7 @@ class Image
     }
 
     /**
-     * Méthode permettant de retourner le poster d'un Film grâce à son id.
+     * Méthode permettant de retourner le poster grâce à son id.
      *
      * @param int $id
      * @return Image

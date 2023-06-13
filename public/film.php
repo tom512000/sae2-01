@@ -37,10 +37,12 @@ $appwebpage->appendContent("\t<div class='bloc'>
 $casts = Cast::findByFilmId($film->getId());
 foreach ($casts as $cast) {
     $acteur = Acteur::findById($cast->getPeopleId());
-    $appwebpage->appendContent("\t<div class='bloc'>
-                                            <img src='./cast.php?posterId={$acteur->getAvatarId()}' alt='Image'/>
-                                            <p class='role'>{$cast->getRole()}</p>
-                                            <p class='name'>{$acteur->getName()}</p>
-                                        </div>\n");
+    $appwebpage->appendContent("\t<div class='bloc2'>
+                                            <img src='./cast.php?avatarId={$acteur->getAvatarId()}' alt='Image'/>
+                                            <div class='infos2'>
+                                                <p class='role'>{$cast->getRole()}</p>
+                                                <p class='name'>{$acteur->getName()}</p>
+                                            </div>
+                                         </div>\n");
 }
 echo $appwebpage->toHTML();
