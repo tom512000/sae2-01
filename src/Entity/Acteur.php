@@ -139,7 +139,7 @@ class Acteur
     {
         $stmt = MyPDO::getInstance()->prepare(
             <<<'SQL'
-                SELECT id, avatarId, birthday, deathday, name, biography, placeOfBirth
+                SELECT id, NVL(avatarId, 'img/actor.png'), birthday, NVL(deathday, ''), name, biography, placeOfBirth
                 FROM people
                 WHERE id = :id
         SQL

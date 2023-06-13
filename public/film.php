@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use Entity\Acteur;
+use Entity\Cast;
 use Entity\Film;
 use Html\AppWebPage;
 
@@ -32,4 +34,13 @@ $appwebpage->appendContent("\t<div class='bloc'>
                                         </div>
                                      </div>\n");
 
+$casts = Cast::findByFilmId($film->getId());
+foreach ($casts as $cast) {
+    $acteur = Acteur::findById($cast->getPeopleId());
+    $appwebpage->appendContent("\t<div class='bloc'>
+                                            <img src='./cast.php?posterId={$acteur->getAvatarId()}' alt='Image'/>
+                                            <p class='role'>{$cast->getRole()}</p>
+                                            <p class='name'>{$acteur->getName()}</p>
+                                        </div>\n");
+}
 echo $appwebpage->toHTML();
