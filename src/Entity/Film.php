@@ -187,4 +187,44 @@ class Film
             return $test;
         }
     }
+
+    public function editInstance(int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title) : void
+    {
+        $this->setPosterId($posterId);
+        $this->setOriginalLanguage($originalLanguage);
+        $this->setOriginalTitle($originalTitle);
+        $this->setOverview($overview);
+        $this->setReleaseDate($releaseDate);
+        $this->setRuntime($runtime);
+        $this->setTagline($tagline);
+        $this->setTitle($title);
+    }
+
+    public function editBDD(int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title) : void
+    {
+        $stmt = MyPDO::getInstance()->prepare(
+            <<<'SQL'
+        UPDATE movie
+        SET posterId = :posterId,
+            originalLanguage = :originalLanguage,
+            originalTitle = :originalTitle,
+            overview = :overview,
+            releaseDate = :releaseDate,
+            runtime = :runtime,
+            tagline = :tagline,
+            title = :title
+        WHERE id = :id
+        SQL
+        );
+        $stmt->bindValue(':posterId', $posterId);
+        $stmt->bindValue(':originalLanguage', $originalLanguage);
+        $stmt->bindValue(':originalTitle', $originalTitle);
+        $stmt->bindValue(':overview', $overview);
+        $stmt->bindValue(':releaseDate', $releaseDate);
+        $stmt->bindValue(':runtime', $runtime);
+        $stmt->bindValue(':tagline', $tagline);
+        $stmt->bindValue(':title', $title);
+        $stmt->bindValue(':id', $this->getId());
+        $stmt->execute();
+    }
 }
