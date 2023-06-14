@@ -11,7 +11,8 @@ $appwebpage->setTitle("Création d'un film");
 
 $appwebpage->appendContent("<div class='form'>
                                        <form method='POST' action='modifier_film.php'>
-                                       <input type='hidden' name='id' value=''>
+                                       <label for='filmId'>ID du film :</label>
+                                       <input type='text' name='filmId' value=''>
                                     
                                        <label for='posterId'>ID de l'affiche :</label>
                                        <input type='text' name='posterId' id='posterId' value=''>
