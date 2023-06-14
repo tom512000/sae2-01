@@ -260,4 +260,17 @@ class Film
         $stmt->bindValue(':title', $title);
         $stmt->execute();
     }
+
+    public function deleteBDD(int $filmId)
+    {
+        $stmt = MyPDO::getInstance()->prepare(
+            <<<'SQL'
+        DELETE FROM movie
+        WHERE id = :id
+        SQL
+        );
+
+        $stmt->bindValue(':id', $filmId);
+        $stmt->execute();
+    }
 }
