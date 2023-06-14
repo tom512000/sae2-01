@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Entity\Collection\FilmCollection;
+use Entity\Genre;
 use Html\AppWebPage;
 
 $appwebpage = new AppWebPage("Films");
@@ -10,8 +11,10 @@ $appwebpage = new AppWebPage("Films");
 $appwebpage->appendContent("<div class='home'>
                 <select name='genre'>");
 
-
-                    
+$genres = Genre::getGenres();
+foreach ($genres as $genre) {
+    $appwebpage->appendContent("                    <option value='{$genre->getId()}'>{$genre->getName()}</option>");
+}
 
 $appwebpage->appendContent("
                 </select>

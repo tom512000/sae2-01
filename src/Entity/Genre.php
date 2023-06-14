@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Entity;
 
+use Entity\Collection\GenreCollection;
+
 class Genre
 {
     private int $id;
@@ -39,5 +41,10 @@ class Genre
     public function setName(string $name):void
     {
         $this->name = $name;
+    }
+
+    public static function getGenres(): array
+    {
+        return GenreCollection::findAll();
     }
 }

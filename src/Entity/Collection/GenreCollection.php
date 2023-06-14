@@ -20,8 +20,8 @@ class GenreCollection
         $stmt = MyPDO::getInstance()->prepare(
             <<<'SQL'
             SELECT id, name
-            FROM movie
-            ORDER BY title
+            FROM genre
+            ORDER BY name
         SQL
         );
         $stmt->execute();
