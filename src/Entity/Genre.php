@@ -32,7 +32,7 @@ class Genre
     }
 
     /**
-     * Accesseur au nom du genre. Retourne la valeur du nom sous forme de nombre entier.
+     * Accesseur au nom du genre. Retourne la valeur du nom sous forme de chaine de caractères.
      *
      * @return string
      */

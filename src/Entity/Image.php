@@ -14,6 +14,8 @@ class Image
     private string $jpeg;
 
     /**
+     * Accesseur à l'id de l'image. Retourne la valeur de l'id sous forme de nombre entier.
+     *
      * @return int
      */
     public function getId(): int
@@ -22,6 +24,8 @@ class Image
     }
 
     /**
+     * Modificateur à l'id de l'image. Permet d’affecter un nouvel id à l'image.
+     *
      * @param int $id
      */
     public function setId(int $id): void
@@ -30,6 +34,8 @@ class Image
     }
 
     /**
+     * Accesseur au lien jpeg de l'image. Retourne la valeur du lien jpeg sous forme de chaine de caractères.
+     *
      * @return string
      */
     public function getJpeg(): string
@@ -38,6 +44,8 @@ class Image
     }
 
     /**
+     * Modificateur au lien jpeg de l'image. Permet d’affecter un nouveau lien jpeg à l'image.
+     *
      * @param string $jpeg
      */
     public function setJpeg(string $jpeg): void
