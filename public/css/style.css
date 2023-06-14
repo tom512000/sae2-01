@@ -337,6 +337,49 @@ a.lien2 {
     height: 50%;
 }
 
+/*edit.php*/
+div.form {
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type='text'], textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type='submit'] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type='submit']:hover {
+    background-color: #45a049;
+}
+
 div.footer {
     display: flex;
     justify-content: center;
