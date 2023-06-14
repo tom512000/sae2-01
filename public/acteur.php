@@ -22,7 +22,10 @@ if (!$acteur) {
 
 $appwebpage->setTitle("Films - {$acteur->getName()}");
 
-$death = $acteur->getDeathday();
+$appwebpage->appendContent("<div class='home'>
+                                       <a href='index.php'><img src='img/home.png' alt='Logo home'/></a>
+                                   </div>");
+
 $appwebpage->appendContent("\t<div class='bloc'>
                                         <img src='./image.php?posterId={$acteur->getAvatarId()}' alt='Image'/>
                                         <div class='infos3'>

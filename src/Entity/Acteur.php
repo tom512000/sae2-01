@@ -11,7 +11,7 @@ use PDO;
 class Acteur
 {
     private int $id;
-    private int $avatarId;
+    private ?int $avatarId;
     private ?string $birthday;
     private ?string $deathday;
     private string $name;
@@ -37,7 +37,7 @@ class Acteur
     /**
      * @return int
      */
-    public function getAvatarId(): int
+    public function getAvatarId(): ?int
     {
         return $this->avatarId;
     }
@@ -139,7 +139,7 @@ class Acteur
     {
         $stmt = MyPDO::getInstance()->prepare(
             <<<'SQL'
-                SELECT id, COALESCE(avatarId, 0) AS avatarId, birthday, deathday, name, biography, placeOfBirth
+                SELECT id, avatarId, birthday, deathday, name, biography, placeOfBirth
                 FROM people
                 WHERE id = :id
         SQL

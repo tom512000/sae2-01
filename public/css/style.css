@@ -55,6 +55,17 @@ a.lien {
 }
 
 /*index.html*/
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+    margin: 5px 100px 5px 100px;
+}
+
 div.affiche {
     display: flex;
     flex-direction: column;

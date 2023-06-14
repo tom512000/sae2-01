@@ -21,6 +21,11 @@ if (!$film) {
 }
 
 $appwebpage->setTitle("Films - {$film->getTitle()}");
+
+$appwebpage->appendContent("<div class='home'>
+                                       <a href='index.php'><img src='img/home.png' alt='Logo home'/></a>
+                                   </div>");
+
 $appwebpage->appendContent("\t<div class='bloc'>
                                         <img src='./image.php?posterId={$film->getPosterId()}' alt='Image'/>
                                         <div class='infos'>
