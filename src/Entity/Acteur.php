@@ -19,6 +19,8 @@ class Acteur
     private string $placeOfBirth;
 
     /**
+     * Accesseur à l'id de l'acteur. Retourne la valeur de l'id sous forme de nombre entier.
+     *
      * @return int
      */
     public function getId(): int
@@ -27,6 +29,8 @@ class Acteur
     }
 
     /**
+     * Modificateur à l'id de l'acteur. Permet d’affecter un nouvel id à l'acteur.
+     *
      * @param int $id
      */
     public function setId(int $id): void
@@ -35,6 +39,8 @@ class Acteur
     }
 
     /**
+     * Accesseur à l'id de l'avatar de l'acteur. Retourne la valeur de l'id de l'avatar sous forme de nombre entier.
+     *
      * @return int
      */
     public function getAvatarId(): ?int
@@ -43,6 +49,8 @@ class Acteur
     }
 
     /**
+     * Modificateur à l'id de l'avatar de l'acteur. Permet d’affecter un nouvel id de l'avatar à l'acteur.
+     *
      * @param int $avatarId
      */
     public function setAvatarId(int $avatarId): void
@@ -51,6 +59,8 @@ class Acteur
     }
 
     /**
+     * Accesseur à la date de naissance de l'acteur. Retourne la valeur de la date de naissance sous forme de chaîne de caractères.
+     *
      * @return string
      */
     public function getBirthday(): ?string
@@ -59,6 +69,8 @@ class Acteur
     }
 
     /**
+     * Modificateur à la date de naissance de l'acteur. Permet d’affecter une nouvelle date de naissance à l'acteur.
+     *
      * @param string $birthday
      */
     public function setBirthday(string $birthday): void
@@ -67,6 +79,8 @@ class Acteur
     }
 
     /**
+     * Accesseur à la date de mort de l'acteur. Retourne la valeur de la date de mort sous forme de chaîne de caractères.
+     *
      * @return string
      */
     public function getDeathday(): ?string
@@ -75,6 +89,8 @@ class Acteur
     }
 
     /**
+     * Modificateur à la date de mort de l'acteur. Permet d’affecter une nouvelle date de mort à l'acteur.
+     *
      * @param string $deathday
      */
     public function setDeathday(string $deathday): void
@@ -83,6 +99,8 @@ class Acteur
     }
 
     /**
+     * Accesseur au nom de l'acteur. Retourne la valeur du nom sous forme de chaîne de caractères.
+     *
      * @return string
      */
     public function getName(): string
@@ -91,6 +109,8 @@ class Acteur
     }
 
     /**
+     * Modificateur au nom de l'acteur. Permet d’affecter un nouveau nom à l'acteur.
+     *
      * @param string $name
      */
     public function setName(string $name): void
@@ -99,6 +119,8 @@ class Acteur
     }
 
     /**
+     * Accesseur à la biographie de l'acteur. Retourne la valeur de la biographie sous forme de chaîne de caractères.
+     *
      * @return string
      */
     public function getBiography(): string
@@ -107,6 +129,8 @@ class Acteur
     }
 
     /**
+     * Modificateur à la biographie de l'acteur. Permet d’affecter une nouvelle biographie à l'acteur.
+     *
      * @param string $biography
      */
     public function setBiography(string $biography): void
@@ -115,6 +139,8 @@ class Acteur
     }
 
     /**
+     * Accesseur au lieu de naissance de l'acteur. Retourne la valeur du lieu de naissance sous forme de chaîne de caractères.
+     *
      * @return string
      */
     public function getPlaceOfBirth(): string
@@ -123,6 +149,8 @@ class Acteur
     }
 
     /**
+     * Modificateur au lieu de naissance de l'acteur. Permet d’affecter un nouveau lieu de naissance de l'acteur.
+     *
      * @param string $placeOfBirth
      */
     public function setPlaceOfBirth(string $placeOfBirth): void
@@ -132,6 +160,7 @@ class Acteur
 
     /**
      * Méthode permettant de retouner un acteur grâce à son id.
+     *
      * @param int $id
      * @return Acteur
      */
