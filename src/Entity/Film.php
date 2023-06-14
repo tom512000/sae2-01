@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Entity;
 
 use Database\MyPdo;
+use Entity\Collection\FilmCollection;
 use Entity\Exception\EntityNotFoundException;
 use PDO;
 
@@ -162,6 +163,11 @@ class Film
     public function setTitle(string $title): void
     {
         $this->title = $title;
+    }
+
+    public static function getFilms(): array
+    {
+        return FilmCollection::findAll();
     }
 
     /**

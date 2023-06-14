@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Entity\Collection\FilmCollection;
+use Entity\Film;
 use Entity\Genre;
 use Html\AppWebPage;
 
@@ -21,7 +21,7 @@ $appwebpage->appendContent("
                 \t<a href='create.php'><img src='img/create.png' alt='Logo create'/></a>
                 </div>");
 
-$tab = FilmCollection::findAll();
+$tab = Film::getFilms();
 
 for ($i = 0; $i < count($tab); $i++) {
     $verif = $appwebpage->escapeString($tab[$i]->getTitle());

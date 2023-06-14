@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Entity;
 
+use Database\MyPdo;
+use PDO;
+
 class FilmGenre
 {
     private int $movieId;
@@ -39,5 +42,23 @@ class FilmGenre
     public function setGenreId(int $genreId):void
     {
         $this->genreId = $genreId;
+    }
+
+    /**
+     * Méthode permettant de retourner tous les films de la table movie.
+     *
+     * @return FilmGenre[]
+     */
+    public static function sortByGenreId(): array
+    {
+        $stmt = MyPDO::getInstance()->prepare(
+            <<<'SQL'
+            SELECT movieId, genreId
+            FROM movie_genre
+        SQL
+        );
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_CLASS, FilmGenre::class);
+        return $stmt->fetchAll();
     }
 }
