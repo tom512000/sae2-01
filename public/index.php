@@ -8,6 +8,13 @@ use Html\AppWebPage;
 $appwebpage = new AppWebPage("Films");
 
 $appwebpage->appendContent("<div class='home'>
+                <select name='genre'>");
+
+
+                    
+
+$appwebpage->appendContent("
+                </select>
                 \t<a href='create.php'><img src='img/create.png' alt='Logo create'/></a>
                 </div>");
 
