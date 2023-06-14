@@ -7,6 +7,10 @@ use Html\AppWebPage;
 
 $appwebpage = new AppWebPage("Films");
 
+$appwebpage->appendContent("<div class='home'>
+                \t<a href='create.php'><img src='img/create.png' alt='Logo create'/></a>
+                </div>");
+
 $tab = FilmCollection::findAll();
 
 for ($i = 0; $i < count($tab); $i++) {

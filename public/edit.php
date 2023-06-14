@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-use Entity\Acteur;
-use Entity\Cast;
 use Entity\Film;
 use Html\AppWebPage;
 

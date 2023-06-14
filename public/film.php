@@ -24,7 +24,8 @@ $appwebpage->setTitle("Films - {$film->getTitle()}");
 
 $appwebpage->appendContent("<div class='home'>
                 \t<a href='index.php'><img src='img/home.png' alt='Logo home'/></a>
-                \t<a href='edit.php?filmId={$film->getId()}'><img src='img/edit.png' alt='Logo home'/></a>
+                \t<a href='edit.php?filmId={$film->getId()}'><img src='img/edit.png' alt='Logo edit'/></a>
+                \t<a href='create.php'><img src='img/create.png' alt='Logo create'/></a>
                 </div>");
 
 $appwebpage->appendContent("\t<div class='bloc'>
