@@ -27,7 +27,7 @@ class Cast
     /**
      * @param int $id
      */
-    public function setId(int $id):void
+    public function setId(int $id): void
     {
         $this->id = $id;
     }
@@ -43,7 +43,7 @@ class Cast
     /**
      * @param int $movieId
      */
-    public function setMovieId(int $movieId):void
+    public function setMovieId(int $movieId): void
     {
         $this->movieId = $movieId;
     }
@@ -59,7 +59,7 @@ class Cast
     /**
      * @param int $peopleId
      */
-    public function setPeopleId(int $peopleId):void
+    public function setPeopleId(int $peopleId): void
     {
         $this->peopleId = $peopleId;
     }
@@ -75,7 +75,7 @@ class Cast
     /**
      * @param string $role
      */
-    public function setRole(string $role):void
+    public function setRole(string $role): void
     {
         $this->role = $role;
     }
@@ -91,7 +91,7 @@ class Cast
     /**
      * @param int $orderIndex
      */
-    public function setOrderIndex(int $orderIndex):void
+    public function setOrderIndex(int $orderIndex): void
     {
         $this->orderIndex = $orderIndex;
     }

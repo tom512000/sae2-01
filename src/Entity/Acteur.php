@@ -29,7 +29,7 @@ class Acteur
     /**
      * @param int $id
      */
-    public function setId(int $id):void
+    public function setId(int $id): void
     {
         $this->id = $id;
     }
@@ -45,7 +45,7 @@ class Acteur
     /**
      * @param int $avatarId
      */
-    public function setAvatarId(int $avatarId):void
+    public function setAvatarId(int $avatarId): void
     {
         $this->avatarId = $avatarId;
     }
@@ -93,7 +93,7 @@ class Acteur
     /**
      * @param string $name
      */
-    public function setName(string $name):void
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
@@ -109,7 +109,7 @@ class Acteur
     /**
      * @param string $biography
      */
-    public function setBiography(string $biography):void
+    public function setBiography(string $biography): void
     {
         $this->biography = $biography;
     }
@@ -125,7 +125,7 @@ class Acteur
     /**
      * @param string $placeOfBirth
      */
-    public function setPlaceOfBirth(string $placeOfBirth):void
+    public function setPlaceOfBirth(string $placeOfBirth): void
     {
         $this->placeOfBirth = $placeOfBirth;
     }

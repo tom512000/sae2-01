@@ -24,7 +24,7 @@ class Image
     /**
      * @param int $id
      */
-    public function setId(int $id):void
+    public function setId(int $id): void
     {
         $this->id = $id;
     }
@@ -40,7 +40,7 @@ class Image
     /**
      * @param string $jpeg
      */
-    public function setJpeg(string $jpeg):void
+    public function setJpeg(string $jpeg): void
     {
         $this->jpeg = $jpeg;
     }

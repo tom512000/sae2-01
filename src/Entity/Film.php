@@ -31,7 +31,7 @@ class Film
     /**
      * @param int $id
      */
-    public function setId(int $id):void
+    public function setId(int $id): void
     {
         $this->id = $id;
     }
@@ -47,7 +47,7 @@ class Film
     /**
      * @param int $posterId
      */
-    public function setPosterId(int $posterId):void
+    public function setPosterId(int $posterId): void
     {
         $this->posterId = $posterId;
     }
@@ -63,7 +63,7 @@ class Film
     /**
      * @param string $originalLanguage
      */
-    public function setOriginalLanguage(string $originalLanguage):void
+    public function setOriginalLanguage(string $originalLanguage): void
     {
         $this->originalLanguage = $originalLanguage;
     }
@@ -79,7 +79,7 @@ class Film
     /**
      * @param string $originalTitle
      */
-    public function setOriginalTitle(string $originalTitle):void
+    public function setOriginalTitle(string $originalTitle): void
     {
         $this->originalTitle = $originalTitle;
     }
@@ -95,7 +95,7 @@ class Film
     /**
      * @param string $overview
      */
-    public function setOverview(string $overview):void
+    public function setOverview(string $overview): void
     {
         $this->overview = $overview;
     }
@@ -111,7 +111,7 @@ class Film
     /**
      * @param string $releaseDate
      */
-    public function setReleaseDate(string $releaseDate):void
+    public function setReleaseDate(string $releaseDate): void
     {
         $this->releaseDate = $releaseDate;
     }
@@ -127,7 +127,7 @@ class Film
     /**
      * @param int $runtime
      */
-    public function setRuntime(int $runtime):void
+    public function setRuntime(int $runtime): void
     {
         $this->runtime = $runtime;
     }
@@ -143,7 +143,7 @@ class Film
     /**
      * @param string $tagline
      */
-    public function setTagline(string $tagline):void
+    public function setTagline(string $tagline): void
     {
         $this->tagline = $tagline;
     }
@@ -159,7 +159,7 @@ class Film
     /**
      * @param string $title
      */
-    public function setTitle(string $title):void
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
@@ -188,7 +188,7 @@ class Film
         }
     }
 
-    public function editInstance(int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title) : void
+    public function editInstance(int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title): void
     {
         $this->setPosterId($posterId);
         $this->setOriginalLanguage($originalLanguage);
@@ -200,7 +200,7 @@ class Film
         $this->setTitle($title);
     }
 
-    public function editBDD(int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title) : void
+    public function editBDD(int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title): void
     {
         $stmt = MyPDO::getInstance()->prepare(
             <<<'SQL'
@@ -228,7 +228,7 @@ class Film
         $stmt->execute();
     }
 
-    public function createInstance(int $filmId, int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title) : void
+    public function createInstance(int $filmId, int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title): void
     {
         $this->setId($filmId);
         $this->setPosterId($posterId);
@@ -241,7 +241,7 @@ class Film
         $this->setTitle($title);
     }
 
-    public function createBDD(int $filmId, int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title) : void
+    public function createBDD(int $filmId, int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title): void
     {
         $stmt = MyPDO::getInstance()->prepare(
             <<<'SQL'
