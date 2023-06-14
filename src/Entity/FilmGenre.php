@@ -13,6 +13,8 @@ class FilmGenre
     private int $genreId;
 
     /**
+     * Accesseur à l'id du film. Retourne la valeur de l'id du film sous forme de nombre entier.
+     *
      * @return int
      */
     public function getMovieId(): int
@@ -21,6 +23,8 @@ class FilmGenre
     }
 
     /**
+     * Modificateur à l'id du film. Permet d’affecter un nouvel id du film.
+     *
      * @param int $movieId
      */
     public function setMovieId(int $movieId):void
@@ -29,6 +33,8 @@ class FilmGenre
     }
 
     /**
+     * Accesseur à l'id du genre. Retourne la valeur de l'id du genre sous forme de nombre entier.
+     *
      * @return int
      */
     public function getGenreId(): int
@@ -37,6 +43,8 @@ class FilmGenre
     }
 
     /**
+     * Modificateur à l'id du genre. Permet d’affecter un nouvel id du genre.
+     *
      * @param int $genreId
      */
     public function setGenreId(int $genreId):void
@@ -45,7 +53,7 @@ class FilmGenre
     }
 
     /**
-     * Méthode permettant de retourner tous les films de la table movie.
+     * Méthode permettant de retourner tous les films de la table movie dans l'ordre.
      *
      * @return FilmGenre[]
      */
