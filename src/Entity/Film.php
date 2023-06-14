@@ -188,18 +188,6 @@ class Film
         }
     }
 
-    public function editInstance(int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title): void
-    {
-        $this->setPosterId($posterId);
-        $this->setOriginalLanguage($originalLanguage);
-        $this->setOriginalTitle($originalTitle);
-        $this->setOverview($overview);
-        $this->setReleaseDate($releaseDate);
-        $this->setRuntime($runtime);
-        $this->setTagline($tagline);
-        $this->setTitle($title);
-    }
-
     public function editBDD(int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title): void
     {
         $stmt = MyPDO::getInstance()->prepare(
@@ -228,20 +216,7 @@ class Film
         $stmt->execute();
     }
 
-    public function createInstance(int $filmId, int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title): void
-    {
-        $this->setId($filmId);
-        $this->setPosterId($posterId);
-        $this->setOriginalLanguage($originalLanguage);
-        $this->setOriginalTitle($originalTitle);
-        $this->setOverview($overview);
-        $this->setReleaseDate($releaseDate);
-        $this->setRuntime($runtime);
-        $this->setTagline($tagline);
-        $this->setTitle($title);
-    }
-
-    public function createBDD(int $filmId, int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title): void
+    public static function createBDD(int $filmId, int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title): void
     {
         $stmt = MyPDO::getInstance()->prepare(
             <<<'SQL'

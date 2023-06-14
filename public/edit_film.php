@@ -15,12 +15,7 @@ $tagline = $_POST['tagline'];
 $title = $_POST['title'];
 
 $film = Film::findById((int)$filmId);
-
-/*Modification de l'instance $film de Film*/
-$film->editInstance($posterId, $originalLanguage, $originalTitle, $overview, $releaseDate, $runtime, $tagline, $title);
-
-/*Modification de la table movie*/
-$film->editBDD($posterId, $originalLanguage, $originalTitle, $overview, $releaseDate, $runtime, $tagline, $title);
+$film->editBDD((int)$posterId, $originalLanguage, $originalTitle, $overview, $releaseDate, (int)$runtime, $tagline, $title);
 
 header("Location: /film.php?filmId={$filmId}");
 exit;

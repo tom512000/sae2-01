@@ -32,7 +32,7 @@ $appwebpage->appendContent("<div class='form'>
                                        <label for='runtime'>Durée :</label>
                                        <input type='text' name='runtime' id='runtime' value=''>
 
-                                       <label for='tagline'>Accroche :</label>
+                                       <label for='tagline'>Slogan :</label>
                                        <input type='text' name='tagline' id='tagline' value=''>
 
                                        <label for='title'>Titre :</label>

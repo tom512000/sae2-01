@@ -99,9 +99,9 @@ class Cast
     /**
      * Méthode permettant de retouner une liste de Cast grâce à un id de Film.
      * @param int $idFilm
-     * @return Cast[]
+     * @return array|null
      */
-    public static function findByFilmId(int $idFilm): array
+    public static function findByFilmId(int $idFilm): ?array
     {
         $stmt = MyPDO::getInstance()->prepare(
             <<<'SQL'
@@ -112,12 +112,7 @@ class Cast
         );
         $stmt->setFetchMode(PDO::FETCH_CLASS, Cast::class);
         $stmt->execute([":idFilm" => $idFilm]);
-        $test = $stmt->fetchAll();
-        if (!$test) {
-            return throw new EntityNotFoundException();
-        } else {
-            return $test;
-        }
+        return $stmt->fetchAll();
     }
 
     /**

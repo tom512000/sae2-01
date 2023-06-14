@@ -7,12 +7,7 @@ use Entity\Film;
 $filmId = $_POST['id'];
 
 $film = Film::findById((int)$filmId);
-
-/*Suppression dans la table movie*/
-$film->deleteBDD($filmId);
-
-/*Suppression de l'instance $film de Film*/
-$film = null;
+$film->deleteBDD((int)$filmId);
 
 header("Location: /index.php");
 exit;

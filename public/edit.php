@@ -21,7 +21,7 @@ if (!$film) {
 $appwebpage->setTitle("Films - Modifier {$film->getTitle()}");
 
 $appwebpage->appendContent("<div class='form'>
-                                       <form method='POST' action='modifier_film.php'>
+                                       <form method='POST' action='edit_film.php'>
                                        <input type='hidden' name='id' value='{$film->getId()}'>
                                     
                                        <label for='posterId'>ID de l'affiche :</label>

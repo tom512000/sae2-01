@@ -14,13 +14,7 @@ $runtime = $_POST['runtime'];
 $tagline = $_POST['tagline'];
 $title = $_POST['title'];
 
-$film = Film::findById((int)$filmId);
-
-/*Création de l'instance $film de Film*/
-$film->createInstance($filmId, $posterId, $originalLanguage, $originalTitle, $overview, $releaseDate, $runtime, $tagline, $title);
-
-/*Ajout dans la table movie*/
-$film->createBDD($filmId, $posterId, $originalLanguage, $originalTitle, $overview, $releaseDate, $runtime, $tagline, $title);
+Film::createBDD((int)$filmId, (int)$posterId, $originalLanguage, $originalTitle, $overview, $releaseDate, (int)$runtime, $tagline, $title);
 
 header("Location: /film.php?filmId={$filmId}");
 exit;
