@@ -17,6 +17,8 @@ class Cast
     private int $orderIndex;
 
     /**
+     * Accesseur à l'id du cast. Retourne la valeur de l'id sous forme de nombre entier.
+     *
      * @return int
      */
     public function getId(): int
@@ -25,6 +27,8 @@ class Cast
     }
 
     /**
+     * Modificateur à l'id du cast. Permet d’affecter un nouvel id au cast.
+     *
      * @param int $id
      */
     public function setId(int $id): void
@@ -33,6 +37,8 @@ class Cast
     }
 
     /**
+     * Accesseur à l'id du film du cast. Retourne la valeur de l'id du film sous forme de nombre entier.
+     *
      * @return int
      */
     public function getMovieId(): int
@@ -41,6 +47,8 @@ class Cast
     }
 
     /**
+     * Modificateur à l'id du film du cast. Permet d’affecter un nouvel id du film du cast.
+     *
      * @param int $movieId
      */
     public function setMovieId(int $movieId): void
@@ -49,6 +57,8 @@ class Cast
     }
 
     /**
+     * Accesseur à l'id de l'acteur du cast. Retourne la valeur de l'id de l'acteur sous forme de nombre entier.
+     *
      * @return int
      */
     public function getPeopleId(): int
@@ -57,6 +67,8 @@ class Cast
     }
 
     /**
+     * Modificateur à l'id de l'acteur du cast. Permet d’affecter un nouvel id de l'acteur du cast.
+     *
      * @param int $peopleId
      */
     public function setPeopleId(int $peopleId): void
@@ -65,6 +77,8 @@ class Cast
     }
 
     /**
+     * Accesseur au rôle du cast. Retourne la valeur du rôle sous forme de chaîne de caractères.
+     *
      * @return string
      */
     public function getRole(): string
@@ -73,6 +87,8 @@ class Cast
     }
 
     /**
+     * Modificateur au rôle du cast. Permet d’affecter un nouveau rôle du cast.
+     *
      * @param string $role
      */
     public function setRole(string $role): void
@@ -81,6 +97,8 @@ class Cast
     }
 
     /**
+     * Accesseur à l'index d'ordre du cast. Retourne la valeur de l'index d'ordre sous forme de nombre entier.
+     *
      * @return int
      */
     public function getOrderIndex(): int
@@ -89,6 +107,8 @@ class Cast
     }
 
     /**
+     * Modificateur à l'index d'ordre du cast. Permet d’affecter un nouvel index d'ordre du cast.
+     *
      * @param int $orderIndex
      */
     public function setOrderIndex(int $orderIndex): void
@@ -98,6 +118,7 @@ class Cast
 
     /**
      * Méthode permettant de retouner une liste de Cast grâce à un id de Film.
+     *
      * @param int $idFilm
      * @return array|null
      */
@@ -117,6 +138,7 @@ class Cast
 
     /**
      * Méthode permettant de retouner une liste de Cast grâce à un id d'Acteur.
+     *
      * @param int $idActor
      * @return Cast[]
      */
