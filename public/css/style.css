@@ -6,6 +6,7 @@
     --main-color: #3b3b3b; /* Couleur 1 : Gris foncé (fond) */
     --seco-color: #bababa; /* Couleur 2 : Gris clair (div) */
     --thir-color: #ffffff; /* Couleur 3 : Blanc (div)*/
+    --four-color: #202225; /* Couleur 4 : Noir (logo)*/
 }
 
 html {
@@ -46,6 +47,7 @@ div.content {
 
 div.list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 90%;
@@ -66,37 +68,32 @@ div.footer {
     font-style: italic;
 }
 
-img, a, select {
-    display: none;
-}
-/*
-a.lien {
-    width: calc(33.33% - 115px);
-    height: 400px;
-    margin: 5px 5px 5px 5px;
-    text-decoration: none;
-    color: black;
-}*/
-
-/*index.html*//*
-.home {
+div.home {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 7%;
     background-color: white;
     border-radius: 20px;
-    margin: 5px 100px 5px 100px;
+    margin: 10px 10% 10px 10%;
 }
 
-div.affiche {
+select {
+    width: auto;
+    height: 90%;
+    border-radius: 5px;
+    color: var(--thir-color);
+    font-family: 'Aoboshi One', serif;
+    background-color: var(--four-color);
+}
+
+a.logo {
     display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    width: 100%;
-    height: 100%;
-    border-radius: 0 0 20px 20px;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: auto;
 }
 
 img {
@@ -104,19 +101,47 @@ img {
     pointer-events: none;
 }
 
-img.menu {
+img.logo {
     width: 100%;
-    height: 85%;
-}*/
-/*
-div.affiche p {
+    height: 100%;
+}
+
+a.affiche {
+    width: calc(100% / 3 - 30px);
+    text-decoration: none;
+    color: black;
+    margin: 5px 5px 5px 5px;
+}
+
+div.affiche {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 15%;
+    height: 100%;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--thir-color);
+}
+
+img.affiche {
+    height: 70%;
+    width: 100%;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+p.affiche {
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: 30%;
+    width: 100%;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
+
 
 /*film.php*/
 div.bloc {

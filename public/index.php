@@ -19,7 +19,7 @@ foreach ($genres as $genre) {
 
 $appwebpage->appendContent("
                     </select>
-                    <a href='create.php'><img src='img/create.png' alt='Logo create'/></a>
+                    <a  class='logo' href='create.php'><img class='logo' src='img/create.png' alt='Logo create'/></a>
                 </div>");
 
 $tab = Film::getFilms();
@@ -27,10 +27,10 @@ $tab = Film::getFilms();
 for ($i = 0; $i < count($tab); $i++) {
     $verif = $appwebpage->escapeString($tab[$i]->getTitle());
     $appwebpage->appendContent("
-                <a class='lien' href='/film.php?filmId={$tab[$i]->getId()}'>
+                <a class='affiche' href='/film.php?filmId={$tab[$i]->getId()}'>
                     <div class='affiche'>
-                        <img class='menu' src='./image.php?posterId={$tab[$i]->getPosterId()}' alt='Image'/>
-                        <p>$verif</p>
+                        <img class='affiche' src='./image.php?posterId={$tab[$i]->getPosterId()}' alt='Image'/>
+                        <p class='affiche'>$verif</p>
                     </div>
                 </a>");
 }
