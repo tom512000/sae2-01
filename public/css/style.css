@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap'); /*Police d'écriture .bouton*/
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap'); /*Police d'écriture .texte*/
 
+:root {
+    --main-color: #3b3b3b; /* Couleur 1 : Gris foncé (fond) */
+    --seco-color: #bababa; /* Couleur 2 : Gris clair (div) */
+    --thir-color: #ffffff; /* Couleur 3 : Blanc (div)*/
+}
+
 html {
     width: 100%;
     height: 100%;
@@ -9,10 +15,10 @@ html {
 
 body {
     width: 100%;
-    height: calc(100% - 5px);
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #3b3b3b;
+    background-color: var(--main-color);
 }
 
 div.header {
@@ -20,41 +26,59 @@ div.header {
     justify-content: center;
     align-items: center;
     width: auto;
-    height: calc(10% - 10px);
-    margin: 5px 100px 5px 100px;
-    background-color: #bababa;
+    height: calc(10% - 5px);
+    margin: 0 10% 0 10%;
     border-radius: 20px 20px 0 0;
-}
-div.header h1 {
+    background-color: var(--seco-color);
     font-family: 'Righteous', cursive;
     letter-spacing: 1px;
 }
 
 div.content {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: auto;
     height: 80%;
-    margin: 5px 100px 5px 100px;
-    background-color: #bababa;
+    margin: 5px 10% 5px 10%;
+    background-color: var(--seco-color);
 }
 
 div.list {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
     overflow-y: auto;
-    justify-content: space-between;
-    margin-left: 50px;
 }
 
+div.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: calc(10% - 5px);
+    margin: 0 10% 0 10%;
+    border-radius: 0 0 20px 20px;
+    background-color: var(--seco-color);
+    font-family: 'Aoboshi One', serif;
+    font-style: italic;
+}
+
+img, a, select {
+    display: none;
+}
+/*
 a.lien {
     width: calc(33.33% - 115px);
     height: 400px;
     margin: 5px 5px 5px 5px;
     text-decoration: none;
     color: black;
-}
+}*/
 
-/*index.html*/
+/*index.html*//*
 .home {
     display: flex;
     justify-content: center;
@@ -83,8 +107,8 @@ img {
 img.menu {
     width: 100%;
     height: 85%;
-}
-
+}*/
+/*
 div.affiche p {
     display: flex;
     width: 100%;
@@ -378,17 +402,4 @@ button[type='submit'] {
 
 button[type='submit']:hover {
     background-color: #45a049;
-}
-
-div.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: calc(10% - 10px);
-    margin: 5px 100px 5px 100px;
-    background-color: #bababa;
-    border-radius: 0 0 20px 20px;
-    font-family: 'Aoboshi One', serif;
-    font-style: italic;
 }
