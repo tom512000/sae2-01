@@ -68,6 +68,7 @@ div.footer {
     font-style: italic;
 }
 
+/*index.php*/
 div.home {
     display: flex;
     justify-content: center;
@@ -141,27 +142,25 @@ p.affiche {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-
-
 /*film.php*/
-div.bloc {
+div.bloc1 {
     display: flex;
     flex-direction: row;
-    width: 95%;
-    height: 400px;
+    width: 100%;
+    height: auto;
     margin: 5px 5px 5px 5px;
     background-color: #ffffff;
     border-radius: 0 20px 20px 0;
 }
 
-div.bloc img {
+div.bloc1 img {
     height: 100%;
-    width: 25%;
+    width: 20%;
 }
 
 div.infos {
     height: 100%;
-    width: 75%;
+    width: 80%;
 }
 
 div.ligne {
@@ -271,6 +270,11 @@ a.lien2 {
     font-size: 25px;
     margin-top: -10px;
 }
+
+
+
+
+
 
 /*acteur.php*/
 .infos3 {

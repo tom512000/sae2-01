@@ -19,7 +19,7 @@ foreach ($genres as $genre) {
 
 $appwebpage->appendContent("
                     </select>
-                    <a  class='logo' href='create.php'><img class='logo' src='img/create.png' alt='Logo create'/></a>
+                    <a class='logo' href='create.php'><img class='logo' src='img/create.png' alt='Logo create'/></a>
                 </div>");
 
 $tab = Film::getFilms();

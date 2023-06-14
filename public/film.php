@@ -23,13 +23,13 @@ if (!$film) {
 $appwebpage->setTitle("Films - {$film->getTitle()}");
 
 $appwebpage->appendContent("<div class='home'>
-                \t<a href='index.php'><img src='img/home.png' alt='Logo home'/></a>
-                \t<a href='edit.php?filmId={$film->getId()}'><img src='img/edit.png' alt='Logo edit'/></a>
-                \t<a href='create.php'><img src='img/create.png' alt='Logo create'/></a>
-                \t<a href='delete.php?filmId={$film->getId()}'><img src='img/delete.png' alt='Logo delete'/></a>
+                \t<a class='logo' href='index.php'><img class='logo' src='img/home.png' alt='Logo home'/></a>
+                \t<a class='logo' href='edit.php?filmId={$film->getId()}'><img class='logo' src='img/edit.png' alt='Logo edit'/></a>
+                \t<a class='logo' href='create.php'><img class='logo' src='img/create.png' alt='Logo create'/></a>
+                \t<a class='logo' href='delete.php?filmId={$film->getId()}'><img class='logo' src='img/delete.png' alt='Logo delete'/></a>
                 </div>");
 
-$appwebpage->appendContent("\t<div class='bloc'>
+$appwebpage->appendContent("\t<div class='bloc1'>
                                         <img src='./image.php?posterId={$film->getPosterId()}' alt='Image'/>
                                         <div class='infos'>
                                             <div class='ligne'>
