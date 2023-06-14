@@ -18,7 +18,7 @@ if (!$film) {
     exit;
 }
 
-$appwebpage->setTitle("Films - {$film->getId()}");
+$appwebpage->setTitle("Films - Modifier {$film->getTitle()}");
 
 $appwebpage->appendContent("<div class='form'>
                                        <form method='POST' action='modifier_film.php'>

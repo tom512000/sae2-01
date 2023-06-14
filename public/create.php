@@ -10,7 +10,7 @@ $appwebpage = new AppWebPage();
 $appwebpage->setTitle("Création d'un film");
 
 $appwebpage->appendContent("<div class='form'>
-                                       <form method='POST' action='modifier_film.php'>
+                                       <form method='POST' action='create_film.php'>
                                        <label for='filmId'>ID du film :</label>
                                        <input type='text' name='filmId' value=''>
                                     
