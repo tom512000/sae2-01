@@ -22,6 +22,8 @@ class Film
     private string $title;
 
     /**
+     * Accesseur à l'id du film. Retourne la valeur de l'id sous forme de nombre entier.
+     *
      * @return int
      */
     public function getId(): int
@@ -30,6 +32,8 @@ class Film
     }
 
     /**
+     * Modificateur à l'id du film. Permet d’affecter un nouvel id du film.
+     *
      * @param int $id
      */
     public function setId(int $id): void
@@ -38,6 +42,8 @@ class Film
     }
 
     /**
+     * Accesseur à l'id du poster du film. Retourne la valeur de l'id du poster sous forme de nombre entier.
+     *
      * @return int
      */
     public function getPosterId(): int
@@ -46,6 +52,8 @@ class Film
     }
 
     /**
+     * Modificateur à l'id du poster du film. Permet d’affecter un nouvel id du poster du film.
+     *
      * @param int $posterId
      */
     public function setPosterId(int $posterId): void
@@ -54,6 +62,8 @@ class Film
     }
 
     /**
+     * Accesseur à la langue d'origine du film. Retourne la valeur de la langue d'origine sous forme de chaîne de caractères.
+     *
      * @return string
      */
     public function getOriginalLanguage(): string
@@ -62,6 +72,8 @@ class Film
     }
 
     /**
+     * Modificateur à la langue d'origine du film. Permet d’affecter une nouvelle langue d'origine du film.
+     *
      * @param string $originalLanguage
      */
     public function setOriginalLanguage(string $originalLanguage): void
@@ -70,6 +82,8 @@ class Film
     }
 
     /**
+     * Accesseur au titre d'origine du film. Retourne la valeur du titre d'origine sous forme de chaîne de caractères.
+     *
      * @return string
      */
     public function getOriginalTitle(): string
@@ -78,6 +92,8 @@ class Film
     }
 
     /**
+     * Modificateur au titre d'origine du film. Permet d’affecter un nouveau titre d'origine du film.
+     *
      * @param string $originalTitle
      */
     public function setOriginalTitle(string $originalTitle): void
@@ -86,6 +102,8 @@ class Film
     }
 
     /**
+     * Accesseur à la description du film. Retourne la valeur de la description sous forme de chaîne de caractères.
+     *
      * @return string
      */
     public function getOverview(): string
@@ -94,6 +112,8 @@ class Film
     }
 
     /**
+     * Modificateur à la description du film. Permet d’affecter une nouvelle description du film.
+     *
      * @param string $overview
      */
     public function setOverview(string $overview): void
@@ -102,6 +122,8 @@ class Film
     }
 
     /**
+     * Accesseur à la date de sortie du film. Retourne la valeur de la date de sortie sous forme de chaîne de caractères.
+     *
      * @return string
      */
     public function getReleaseDate(): string
@@ -110,6 +132,8 @@ class Film
     }
 
     /**
+     * Modificateur à la date de sortie du film. Permet d’affecter une nouvelle date de sortie du film.
+     *
      * @param string $releaseDate
      */
     public function setReleaseDate(string $releaseDate): void
@@ -118,6 +142,8 @@ class Film
     }
 
     /**
+     * Accesseur au temps du film. Retourne la valeur du temps sous forme de nombre entier.
+     *
      * @return int
      */
     public function getRuntime(): int
@@ -126,6 +152,8 @@ class Film
     }
 
     /**
+     * Modificateur au temps du film. Permet d’affecter un nouveau temps du film.
+     *
      * @param int $runtime
      */
     public function setRuntime(int $runtime): void
@@ -134,6 +162,8 @@ class Film
     }
 
     /**
+     * Accesseur au slogan du film. Retourne la valeur du slogan sous forme de chaîne de caractères.
+     *
      * @return string
      */
     public function getTagline(): string
@@ -142,6 +172,8 @@ class Film
     }
 
     /**
+     * Modificateur au slogan du film. Permet d’affecter un nouveau slogan du film.
+     *
      * @param string $tagline
      */
     public function setTagline(string $tagline): void
@@ -150,6 +182,8 @@ class Film
     }
 
     /**
+     * Accesseur au titre du film. Retourne la valeur du titre sous forme de chaîne de caractères.
+     *
      * @return string
      */
     public function getTitle(): string
@@ -158,6 +192,8 @@ class Film
     }
 
     /**
+     * Modificateur au titre du film. Permet d’affecter un nouveau titre du film.
+     *
      * @param string $title
      */
     public function setTitle(string $title): void
@@ -165,6 +201,11 @@ class Film
         $this->title = $title;
     }
 
+    /**
+     * Méthode permettant de retourner tous les films de la table movie sous forme de liste.
+     *
+     * @return array
+     */
     public static function getFilms(): array
     {
         return FilmCollection::findAll();
@@ -172,6 +213,7 @@ class Film
 
     /**
      * Méthode permettant de retouner un film grâce à son id.
+     *
      * @param int $id
      * @return Film
      */
@@ -194,6 +236,9 @@ class Film
         }
     }
 
+    /**
+     * Méthode permettant de modifier une ligne dans la base de données.
+     */
     public function editBDD(int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title): void
     {
         $stmt = MyPDO::getInstance()->prepare(
@@ -222,6 +267,9 @@ class Film
         $stmt->execute();
     }
 
+    /**
+     * Méthode permettant d'ajouter une ligne dans la base de données.
+     */
     public static function createBDD(int $filmId, int $posterId, string $originalLanguage, string $originalTitle, string $overview, string $releaseDate, int $runtime, string $tagline, string $title): void
     {
         $stmt = MyPDO::getInstance()->prepare(
@@ -242,6 +290,9 @@ class Film
         $stmt->execute();
     }
 
+    /**
+     * Méthode permettant de supprimer une ligne dans la base de données.
+     */
     public function deleteBDD(int $filmId)
     {
         $stmt = MyPDO::getInstance()->prepare(
