@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap'); /*Police d'écriture .footer*/
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap'); /*Police d'écriture .bouton*/
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap'); /*Police d'écriture .texte*/
+
+:root {
+    --main-color: #3b3b3b; /* Couleur 1 : Gris foncé (fond) */
+    --seco-color: #bababa; /* Couleur 2 : Gris clair (div) */
+    --thir-color: #ffffff; /* Couleur 3 : Blanc (div)*/
+    --four-color: #202225; /* Couleur 4 : Noir (logo)*/
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-color);
+}
+
+div.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: calc(10% - 5px);
+    margin: 0 10% 0 10%;
+    border-radius: 20px 20px 0 0;
+    background-color: var(--seco-color);
+    font-family: 'Righteous', cursive;
+    letter-spacing: 1px;
+}
+
+div.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 80%;
+    margin: 5px 10% 5px 10%;
+    background-color: var(--seco-color);
+}
+
+div.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+}
+
+div.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: calc(10% - 5px);
+    margin: 0 10% 0 10%;
+    border-radius: 0 0 20px 20px;
+    background-color: var(--seco-color);
+    font-family: 'Aoboshi One', serif;
+    font-style: italic;
+}
+
+/*index.php*/
+div.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 7%;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px 10% 10px 10%;
+}
+
+select {
+    width: auto;
+    height: 90%;
+    border-radius: 5px;
+    color: var(--thir-color);
+    font-family: 'Aoboshi One', serif;
+    background-color: var(--four-color);
+}
+
+a.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: auto;
+}
+
+img {
+    user-select: none;
+    pointer-events: none;
+}
+
+img.logo {
+    width: 100%;
+    height: 100%;
+}
+
+a.affiche {
+    width: calc(100% / 3 - 30px);
+    text-decoration: none;
+    color: black;
+    margin: 5px 5px 5px 5px;
+}
+
+div.affiche {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--thir-color);
+}
+
+img.affiche {
+    height: 70%;
+    width: 100%;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+p.affiche {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/*film.php*/
+div.bloc1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    margin: 5px 5px 5px 5px;
+    background-color: #ffffff;
+    border-radius: 0 20px 20px 0;
+}
+
+div.bloc1 img {
+    height: 100%;
+    width: 20%;
+}
+
+div.infos {
+    height: 100%;
+    width: 80%;
+}
+
+div.ligne {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% / 4 - 15px);
+    width: 100%;
+}
+
+.titre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    font-family: 'Righteous', cursive;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    font-family: 'Aoboshi One', serif;
+    margin-top: 10px;
+    font-size: 20px;
+    border-left: 2px solid black;
+}
+
+.original {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: calc(100% / 4 - 15px);
+    width: 100%;
+    border-top: 2px solid black;
+    font-family: 'Aoboshi One', serif;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% / 4 - 15px);
+    width: 100%;
+    border-top: 2px solid black;
+    font-family: 'Aoboshi One', serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.resume {
+    height: calc(100% / 4 - 15px);
+    width: 100%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border-top: 2px solid black;
+}
+
+a.lien2 {
+    width: 95%;
+    height: 200px;
+    margin: 5px 5px 5px 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.bloc2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 0 20px 20px 0;
+    font-family: 'Aoboshi One', serif;
+}
+
+.infos2 {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.role {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    font-size: 25px;
+    margin-top: -10px;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    font-size: 25px;
+    margin-top: -10px;
+}
+
+
+
+
+
+
+/*acteur.php*/
+.infos3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 75%;
+}
+
+.ligne2 {
+    display: flex;
+    width: 100%;
+}
+
+.name2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100% / 3);
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.naissance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100% / 3);
+    font-size: 25px;
+    margin-top: -10px;
+}
+
+.datenais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: calc(100% / 3);
+    width: 100%;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.espace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: calc(100% / 3);
+    width: 100%;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.datemort {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% / 3);
+    width: 100%;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.biographie {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% / 3);
+    width: 100%;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.bloc3 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 0 20px 20px 0;
+    font-family: 'Aoboshi One', serif;
+}
+
+.infos4 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+}
+
+.titre2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.date2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+}
+
+.role2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+/*edit.php*/
+div.form {
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type='text'], textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type='submit'] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type='submit']:hover {
+    background-color: #45a049;
+}
